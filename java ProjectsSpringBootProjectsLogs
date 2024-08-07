@@ -1,0 +1,26 @@
+2024-08-07T15:43:22.421+05:00  INFO 17244 --- [flightReservation] [restartedMain] c.s.f.FlightReservationApplication       : Starting FlightReservationApplication using Java 17.0.10 with PID 17244 (D:\java Projects\SpringBootProjects\flightReservation\target\classes started by hp in D:\java Projects\SpringBootProjects\flightReservation)
+2024-08-07T15:43:22.422+05:00  INFO 17244 --- [flightReservation] [restartedMain] c.s.f.FlightReservationApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-08-07T15:43:22.572+05:00  INFO 17244 --- [flightReservation] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07T15:43:22.583+05:00  INFO 17244 --- [flightReservation] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 3 JPA repository interfaces.
+2024-08-07T15:43:22.650+05:00  INFO 17244 --- [flightReservation] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-07T15:43:22.650+05:00  INFO 17244 --- [flightReservation] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-07T15:43:22.650+05:00  INFO 17244 --- [flightReservation] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07T15:43:22.662+05:00  INFO 17244 --- [flightReservation] [restartedMain] o.a.c.c.C.[.[.[/flightReservation]       : Initializing Spring embedded WebApplicationContext
+2024-08-07T15:43:22.663+05:00  INFO 17244 --- [flightReservation] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 237 ms
+2024-08-07T15:43:22.686+05:00  INFO 17244 --- [flightReservation] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-73 - Starting...
+2024-08-07T15:43:22.697+05:00  INFO 17244 --- [flightReservation] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-73 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53566ea4
+2024-08-07T15:43:22.697+05:00  INFO 17244 --- [flightReservation] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-73 - Start completed.
+2024-08-07T15:43:22.698+05:00  INFO 17244 --- [flightReservation] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07T15:43:22.700+05:00  INFO 17244 --- [flightReservation] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-07T15:43:22.706+05:00  INFO 17244 --- [flightReservation] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07T15:43:22.737+05:00  INFO 17244 --- [flightReservation] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07T15:43:22.737+05:00  INFO 17244 --- [flightReservation] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07T15:43:22.805+05:00  WARN 17244 --- [flightReservation] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07T15:43:22.886+05:00  INFO 17244 --- [flightReservation] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-07T15:43:22.896+05:00  INFO 17244 --- [flightReservation] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/flightReservation'
+2024-08-07T15:43:22.900+05:00  INFO 17244 --- [flightReservation] [restartedMain] c.s.f.FlightReservationApplication       : Started FlightReservationApplication in 0.524 seconds (process running for 3208.338)
+2024-08-07T15:43:22.901+05:00  INFO 17244 --- [flightReservation] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-07T15:43:57.309+05:00  INFO 17244 --- [flightReservation] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-07T15:43:57.349+05:00  INFO 17244 --- [flightReservation] [Thread-281] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07T15:43:57.349+05:00  INFO 17244 --- [flightReservation] [Thread-281] com.zaxxer.hikari.HikariDataSource       : HikariPool-73 - Shutdown initiated...
+2024-08-07T15:43:57.351+05:00  INFO 17244 --- [flightReservation] [Thread-281] com.zaxxer.hikari.HikariDataSource       : HikariPool-73 - Shutdown completed.

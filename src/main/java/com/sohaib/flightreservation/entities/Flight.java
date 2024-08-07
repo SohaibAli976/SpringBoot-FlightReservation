@@ -39,4 +39,16 @@ public class Flight extends AbstractEntity{
     @Column(name = "ESTIMATED_DEPARTURE_TIME")
     private Timestamp estimatedDepartureTime;
 
+    @Override
+    public String toString() {
+        return "Flight{" +
+                "id=" + id +
+                ", flightNumber='" + flightNumber + '\'' +
+                ", departureCity='" + departureCity + '\'' +
+                ", operatingAirlines='" + operatingAirlines + '\'' +
+                ", arrivalCity='" + arrivalCity + '\'' +
+                ", dateOfDeparture=" + dateOfDeparture +
+                ", estimatedDepartureTime=" + estimatedDepartureTime +
+                '}';
+    }
 }

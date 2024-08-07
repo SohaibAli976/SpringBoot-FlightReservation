@@ -1,0 +1,23 @@
+<configuration>
+    <property name="LOG_DIR" Value="D:/java Projects/SpringBootProjects/Logs"/>
+    <property name="FILE_PREFIX" Value="flightreservation"/>
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_DIR}/${FILE_PREFIX}.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+        <Pattern> %d{yyyy-MM-dd HH:mm:ss}- %msg%n</Pattern>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>
+                    ${LOG_DIR}/archived/${FILE_PREFIX}.%d{yyyy-MM-dd}.%i.log
+                </fileNamePattern>
+                <timeBasedFileNameAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                    <maxFileSize>
+                        10MB
+                    </maxFileSize>
+                </timeBasedFileNameAndTriggeringPolicy>
+            </rollingPolicy>
+        </encoder>
+    </appender>
+    <root level="info">
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>

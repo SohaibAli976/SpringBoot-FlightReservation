@@ -5,6 +5,8 @@ import com.sohaib.flightreservation.entities.Flight;
 import com.sohaib.flightreservation.entities.Reservation;
 import com.sohaib.flightreservation.repository.FlightRepository;
 import com.sohaib.flightreservation.services.ReservationService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -20,10 +22,13 @@ public class ReservationController {
     @Autowired
     ReservationService reservationService;
 
+    private static final Logger LOGGER=  LoggerFactory.getLogger(ReservationController.class);
+
     @Autowired
     FlightRepository flightRepository;
     @GetMapping("/showCompleteReservation")
     public String showCompleteReservation(@RequestParam("flightId") Long flightId, ModelMap modelMap) {
+        LOGGER.info("showCompleteReservation invoked with the flight id "+flightId);
         Flight flight = flightRepository.findById(flightId).get();
         modelMap.addAttribute("flight",flight);
         return "completeReservation";
@@ -31,7 +36,7 @@ public class ReservationController {
 
     @PostMapping("/completeReservation")
     public String completeReservation(ReservationRequest reservationRequest, ModelMap modelMap) {
-
+        LOGGER.info("completeReservation "+reservationRequest);
        Reservation reservation= reservationService.addFlight(reservationRequest);
        modelMap.addAttribute("msg","Reservation Created Successfully and Reservation id is "+reservation.getId());
        return "reservationConfirmation";

@@ -16,6 +16,18 @@ public class Passenger extends AbstractEntity{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Override
+    public String toString() {
+        return "Passenger{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
+    }
+
     private String firstName;
     private String lastName;
     private String middleName;

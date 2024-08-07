@@ -2,6 +2,9 @@ package com.sohaib.flightreservation.controllers;
 
 import com.sohaib.flightreservation.entities.Flight;
 import com.sohaib.flightreservation.repository.FlightRepository;
+import lombok.extern.java.Log;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
@@ -22,6 +25,8 @@ public class FlightController {
     @Autowired
     FlightRepository flightRepository;
 
+    private static final Logger LOGGER=  LoggerFactory.getLogger(FlightController.class);
+
     @GetMapping("/findFlights")
     public String showFindFlights() {
         return "findFlights";
@@ -29,11 +34,10 @@ public class FlightController {
 
     @PostMapping("/findFlights")
     public String findFlights(@RequestParam("from") String from, @RequestParam("to") String to, @RequestParam("departureDate") @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate departureDate, ModelMap modelMap) {
+        LOGGER.info("Inside findFlights From: "+from+" To: "+to+" DepartureDate: "+departureDate);
         List<Flight> flightList = //flightRepository.findAll();
                 flightRepository.findFlights(from, to, departureDate);
-        System.out.println("Departure Date: " + departureDate);
-        System.out.println("From: " + from);
-        System.out.println("To: " + to);
+        LOGGER.info("Flights found are "+flightList);
         modelMap.addAttribute("flights", flightList);
         return "displayFlights";
     }

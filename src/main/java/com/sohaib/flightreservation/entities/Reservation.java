@@ -23,6 +23,18 @@ public class Reservation extends AbstractEntity{
     @JoinColumn(name = "passenger_id", referencedColumnName = "id")
     private Passenger passengerId;
 
+    @Override
+    public String toString() {
+        return "Reservation{" +
+                "id=" + id +
+                ", checkedIn=" + checkedIn +
+                ", numberOfBags=" + numberOfBags +
+                ", passengerId=" + passengerId +
+                ", flightId=" + flightId +
+                ", created=" + created +
+                '}';
+    }
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="flight_id",referencedColumnName = "id")
     private Flight flightId;
