@@ -12,6 +12,7 @@ import com.sohaib.flightreservation.repository.ReservationRepository;
 import com.sohaib.flightreservation.util.EmailUtil;
 import com.sohaib.flightreservation.util.PDFGenerator;
 import jakarta.mail.MessagingException;
+import jakarta.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +45,9 @@ public class ReservationServiceImpl implements ReservationService{
     private static final Logger LOGGER=  LoggerFactory.getLogger(ReservationServiceImpl.class);
 
 
+
     @Override
+    @Transactional
     public Reservation addFlight(ReservationRequest reservationRequest) {
         LOGGER.info("Inside addFlight()");
         Flight flight= flightRepository.findById(reservationRequest.getFlightId()).get();
